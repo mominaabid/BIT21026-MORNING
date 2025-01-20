@@ -1,0 +1,81 @@
+BIT21026-MOMINA ABID
+7TH SEMESTER-MORNING
+
+
+QUESTION1
+A = 255 * ones(100, 100); % Initialize a 100x100 matrix with 255 (white background)
+Cx = 50;                  % X-coordinate of the circle center
+Cy = 50;                  % Y-coordinate of the circle center
+Radius = 20;              % Radius of the circle
+
+for i = 1:100
+    for j = 1:100
+        % Calculate the Euclidean distance from (i, j) to the center (Cx, Cy)
+        distance = sqrt((Cx - i)^2 + (Cy - j)^2);
+        
+        % If the distance is less than or equal to the radius, set pixel value to 0 (black)
+        if distance <= Radius
+            A(i, j) = 0;
+        end
+    end
+end
+
+% Display the matrix as an image
+imshow(A, []);
+
+ 
+
+QUESTION2
+
+% Initialize a 100x100 matrix with zeros
+A = zeros(100, 100); 
+
+% Define the circle parameters
+Cx = 50;  % X-coordinate of the circle center
+Cy = 50;  % Y-coordinate of the circle center
+Radius = 20; % Radius of the circle
+
+% Iterate through each pixel in the matrix
+for i = 1:100
+    for j = 1:100
+        % Calculate the City Block distance from (i, j) to the center (Cx, Cy)
+        distance = abs(Cx - i) + abs(Cy - j);
+        
+        % Check if the distance is less than or equal to the radius
+        if distance <= Radius
+            A(i, j) = 255; % Set the pixel value to 255 (white)
+        end
+    end
+end
+
+% Display the resulting image
+imshow(A, []);
+
+Question3
+% Initialize a 100x100 matrix with zeros
+A = zeros(100, 100); 
+
+% Define the circle parameters
+Cx = 50;  % X-coordinate of the circle center
+Cy = 50;  % Y-coordinate of the circle center
+Radius = 20; % Radius of the circle
+
+% Iterate through each pixel in the matrix
+for i = 1:100
+    for j = 1:100
+        % Create a chessboard pattern
+        if mod(floor(i / 10) + floor(j / 10), 2) == 0
+            A(i, j) = 255; % White square
+        end
+    end
+end
+
+% Display the resulting chessboard pattern
+imshow(A, []);
+title('Chessboard Pattern');
+
+
+ 
+
+QUESTION NO 3:
+
