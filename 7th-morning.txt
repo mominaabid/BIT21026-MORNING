@@ -1,0 +1,20 @@
+Submitted by:Momina Abid(BIT21026)
+             Alishba RASHEED(BIT21040)
+             HAMNA JUNAID(BIT21015)
+             ALEENA OMER(BIT21043)
+SEMESTER:IT_7TH (MORNING)
+
+                                  Computer vision final project:
+                                    Facial emotion detection
+This project is a **Real-Time Facial Emotion Detection System** that uses a Convolutional Neural Network (CNN) 
+for recognizing human emotions from facial expressions. The system is trained on a dataset organized into directories for training and testing
+ (e.g., the FER-2013 dataset). The training process employs data augmentation techniques such as rotation, shifting, and horizontal flipping to 
+enhance model performance. The CNN architecture consists of multiple convolutional layers, max-pooling, and dense layers to extract features and 
+classify them into one of seven emotions: Angry, Disgust, Fear, Happy, Sad, Surprise, and Neutral.
+
+The project leverages **TensorFlow** and **Keras** for model development, **OpenCV** for real-time video processing and face detection using 
+Haar Cascade Classifiers, and **NumPy** for numerical computations. The trained model is saved as `emotion_model.h5` and can be deployed in real-time
+ using a webcam. The real-time detection process captures video frames, detects faces, preprocesses them (grayscale conversion and resizing),
+ predicts emotions using the trained model, and overlays the identified emotion on the video feed. This project is an integration of machine learning,
+ computer vision, and deep learning technologies to achieve efficient emotion recognition in real-time applications.
+
