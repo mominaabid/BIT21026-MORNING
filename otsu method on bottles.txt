@@ -1,0 +1,11 @@
+b = imread('bottles.jpg');
+t=double(multithresh(b,2))/256
+bL = im2bw(b,t(1));
+bH = im2bw(b,t(2));
+L = (bL-bH);
+L1 = medfilt2(L,[9 9],'symmetric');
+subplot(2,3,1),imshow(b),title('Bottles'),
+subplot(2,3,2), imshow(bL), title('Liquid White'),
+subplot(2,3,3), imshow(bH), title('Liquid Black'),
+subplot(2,3,4), imshow(L), title('Liquid with noise'),
+subplot(2,3,5), imshow(L1), title('Pure Liquid')
